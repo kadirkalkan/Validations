@@ -1,0 +1,29 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form action="/" method="post">
+    <input type="text" asp-for="Name" placeholder="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <input type="text" asp-for="Surname" placeholder="SurName" />
+    <span asp-validation-for="Surname"></span>
+    <br />
+    <input type="number" asp-for="Yas" placeholder="Yas" />
+    <span asp-validation-for="Yas"></span>
+    <br />
+    <input type="email" asp-for="Email" placeholder="Email" />
+    <span asp-validation-for="Email"></span>
+    <br />
+    <input type="submit" value="Gönder" />
+</form>
